@@ -1,0 +1,22 @@
+body {
+    background: Linen;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+h1 {
+    font-family: Verdana, Gevena, sans-serif;
+    font-size: 2.5em;
+    color: FireBrick;
+    text-align: center;
+}
+
+p {
+    font-family: Verdana, Gevena, sans-serif;
+    color: FireBrick;
+}
+
+table, td {
+    border: 1px solid;
+    text-align: center;
+}

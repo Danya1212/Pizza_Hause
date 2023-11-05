@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title}}</title>
+    <link rel="stylesheet" href="/staticFiles/main.css/">
+</head>
+<body>
+    <h1>Menu</h1>
+    <table>
+        <tr>
+            <th>Pizza ID</th>
+            <th>Pizza Name</th>
+            <th>Pizza Price</th>
+        </tr>
+        {% for name_el in dishes|sort(attribute="price") %}
+        <tr>
+            <td>{{ name_el.id }}</td>
+            <td>{{ name_el.name }}</td>
+            <td>{{ name_el.price }} UAH</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr/>
+    <form action="/sumbit/" method="POST">
+        <label>Enter your name:</label>
+        <input type="name" name="user_name" placeholder="Enter your name" required/><br/>
+        <label>Enter ID of Pizza that you want to buy:</label>
+        <input type="name" name="prod_id" placeholder="Enter Product ID" required/><br/>
+        <input type = "submit" value = "submit"/>
+    </form>
+    <hr/>
+</body>
+</html>
